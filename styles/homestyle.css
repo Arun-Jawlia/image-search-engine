@@ -232,48 +232,57 @@ i {
   top: 1rem;
 }
 
+
+
+
 /* Single Image Viewer */
 .single-img-viewer {
   position: fixed;
   height: 100vh;
-  background: transparent;
   top: 0;
   width: 100%;
   z-index: 10;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  display: none;
+  margin: auto;
+}
+
+.single-img-viewer.show{
+  display: block;
 }
 
 .single-img-viewer .image-box {
-  height: 80%;
-  width: 70%;
+  height: 60%;
+  width: 50%;
   color: black;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   margin: auto;
-  justify-content: center;
-  column-gap: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
+  position: fixed;
+  /* left: 50%; */
+  transform: translateY(-50%, -50%);
+  background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
 }
 
 .single-img-viewer .image-box > div:nth-child(1) {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: center;
 }
 
+
+
 .single-img-viewer .image-box img {
-  width: 100%;
+  height: 300px;
+  width: 300px;
   border-radius: 5px;
 }
 
 .single-img-viewer .image-box .detail-box {
   padding: 1rem;
+  display: flex;
 }
 
 .detail-box div:first-child {
